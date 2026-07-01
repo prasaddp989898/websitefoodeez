@@ -1,0 +1,4 @@
+<!-- Replace this placeholder with the actual Foodeez logo image.
+The original request asked to replace the photo, so copy your new PNG/JPG into this
+location (public/logo.png) so that the <img src="/logo.png" /> references in
+`src/App.tsx` automatically pick up the new image when the app is rebuilt. -->

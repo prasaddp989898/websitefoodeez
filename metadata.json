@@ -1,0 +1,5 @@
+{
+  "name": "Foodeez",
+  "description": "Foodeez delivers happiness to your doorstep in minutes. A modern food delivery experience.",
+  "requestFramePermissions": ["geolocation"]
+}
