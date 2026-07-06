@@ -20,7 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 200);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -42,7 +42,7 @@ export default function Header() {
     }`}>
       <div className="max-w-screen-xl mx-auto w-full h-[64px] md:h-[72px] lg:h-[88px] px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 flex items-center justify-between gap-4">
         <div
-          className="flex items-center gap-3 cursor-pointer flex-shrink-0"
+          className="flex items-center gap-3 cursor-pointer flex-shrink-0 min-w-[92px]"
           onClick={() => {
             window.location.href = "/";
           }}
@@ -50,7 +50,7 @@ export default function Header() {
           <img
             src="/rider3.png"
             alt="Foodeez"
-            className="h-8 sm:h-10 md:h-12 lg:h-20 xl:h-32 w-auto object-contain transition-transform duration-300 mt-1"
+            className="h-10 sm:h-12 md:h-14 lg:h-20 xl:h-32 w-auto object-contain transition-transform duration-300"
           />
         </div>
 

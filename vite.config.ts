@@ -18,7 +18,7 @@ export default defineConfig(({mode}) => {
       port: 3002,
       proxy: {
         '/api': {
-          target: 'http://3.109.99.63:3001',
+          target: 'http://localhost:3001',
           changeOrigin: true,
           secure: false,
           ws: true,
@@ -26,6 +26,17 @@ export default defineConfig(({mode}) => {
       },
       // hot module replacement configuration
       hmr: process.env.DISABLE_HMR !== 'true',
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+            'vendor-motion': ['motion'],
+            'vendor-icons': ['lucide-react', 'react-icons'],
+          },
+        },
+      },
     },
   };
 });

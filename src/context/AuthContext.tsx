@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }: any) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
   const [authView, setAuthView] = useState<"login" | "signup" | "forgot">("login");
-  const customerAuthLoginUrl = "https://int.foodeez.in/customer/auth/login";
+  const customerAuthLoginUrl = "http://localhost:3000/customer/auth/login";
   const appRedirectUrl = window.location.origin + "/";
 
   const goToCustomerAuthLogin = () => {

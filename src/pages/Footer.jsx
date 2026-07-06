@@ -14,6 +14,8 @@ export default function Footer() {
                 src="/rider3.png"
                 alt="Foodeez"
                 className="max-w-28 h-auto block scale-[2.2] mt-4"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -91,13 +93,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="text-sm font-black uppercase tracking-[0.2em] text-stone-400 mb-8">
+            <h5 className="text-sm font-black uppercase tracking-[0.2em] text-stone-400 mb-6">
               Newsletter
             </h5>
-            <p className="text-stone-500 mb-6 leading-relaxed">
+            <p className="text-stone-500 mb-4 text-sm leading-relaxed">
               Get exclusive offers, delivery updates, and food recommendations
               straight to your inbox.
             </p>
+            <div className="flex gap-2 mb-6">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-xs outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-white transition-all w-full"
+              />
+              <motion.button
+                whileHover={{ scale: 1.02, backgroundColor: "#a67c2a" }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-[#B88A2E] text-white font-bold text-xs px-4 py-2 rounded-xl transition-all"
+              >
+                Subscribe
+              </motion.button>
+            </div>
             <div className="flex gap-3">
               <motion.a
                 href="https://www.instagram.com"

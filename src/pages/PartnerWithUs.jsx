@@ -282,6 +282,8 @@ export default function PartnerWithUs() {
               src="/deliv.jpeg"
               alt="Onboarding Process"
               className="relative w-full max-w-[620px] object-cover rounded-2xl shadow-none bg-white "
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
 
@@ -339,7 +341,7 @@ export default function PartnerWithUs() {
       {/* WHY PARTNER */}
       {/* ================================= */}
 
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-12">
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-12 relative overflow-hidden">
         {/* Heading */}
 
         <div className="text-center">
